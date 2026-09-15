@@ -18,7 +18,8 @@ El chatbot reconoce estas palabras:
 
 - hola o buenas: muestra un saludo.
 - horario: indica el horario de atencion de lunes a viernes, de 9 am a 6 pm.
-- precio o costo: indica que el chatbot es una demostracion y no maneja precios.
+- precio, costo o servicio: muestra la lista de servicios disponibles.
+- nombre de un servicio: muestra el costo configurado para ese servicio.
 - contacto o telefono: muestra un numero de contacto de ejemplo.
 - gracias: responde de forma cordial.
 
@@ -32,6 +33,29 @@ La conversacion se desplaza automaticamente hacia el ultimo mensaje. La pagina s
 - `styles.css`: colores, distribucion y vista adaptable.
 - `app.js`: envio de mensajes y respuestas del chatbot.
 
+## Cambiar servicios y costos
+
+En `app.js` esta la lista `servicios`. Reemplaza los nombres y los valores de ejemplo por los servicios y costos reales.
+
+```js
+const servicios = {
+  "servicio 1": "PONER COSTO",
+  "servicio 2": "PONER COSTO",
+  "servicio 3": "PONER COSTO",
+};
+```
+
+Ejemplo:
+
+```js
+const servicios = {
+  "servicio a": "50",
+  "servicio b": "80",
+};
+```
+
+Despues de guardar el archivo, recarga la pagina en el navegador.
+
 ## Limites
 
-Las respuestas son fijas y se generan en el navegador. La conversacion no se guarda al cerrar o recargar la pagina.
+Las respuestas, servicios y costos se generan en el navegador. La conversacion no se guarda al cerrar o recargar la pagina.

@@ -2,8 +2,22 @@ const formulario = document.querySelector("#formulario-chat");
 const entrada = document.querySelector("#entrada");
 const mensajes = document.querySelector("#mensajes");
 
+const servicios = {
+  "servicio 1": "PONER COSTO",
+  "servicio 2": "PONER COSTO",
+  "servicio 3": "PONER COSTO",
+};
+
 function obtenerRespuesta(texto) {
   const mensaje = texto.toLowerCase();
+  const nombresServicios = Object.keys(servicios);
+  const listaServicios = nombresServicios.join(", ");
+
+  for (const servicio of nombresServicios) {
+    if (mensaje.includes(servicio)) {
+      return `El costo de ${servicio} es: ${servicios[servicio]}.`;
+    }
+  }
 
   if (mensaje.includes("hola") || mensaje.includes("buenas")) {
     return "Hola. En que puedo ayudarte?";
@@ -13,8 +27,12 @@ function obtenerRespuesta(texto) {
     return "Atendemos de lunes a viernes de 9 am a 6 pm.";
   }
 
-  if (mensaje.includes("precio") || mensaje.includes("costo")) {
-    return "Este chatbot es una demostracion y no maneja precios.";
+  if (
+    mensaje.includes("precio") ||
+    mensaje.includes("costo") ||
+    mensaje.includes("servicio")
+  ) {
+    return `Los servicios disponibles son: ${listaServicios}. Escribe el nombre de un servicio para ver su costo.`;
   }
 
   if (mensaje.includes("contacto") || mensaje.includes("telefono")) {
@@ -25,7 +43,7 @@ function obtenerRespuesta(texto) {
     return "De nada. Estoy aqui para ayudarte.";
   }
 
-  return "No entendi tu mensaje. Puedes preguntar por horario o contacto.";
+  return "No entendi tu mensaje. Puedes preguntar por servicios, costo, horario o contacto.";
 }
 
 function agregarMensaje(texto, tipo) {
