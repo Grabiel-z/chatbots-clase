@@ -1,0 +1,160 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #eaf2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.pagina {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 560px);
+  height: min(700px, calc(100vh - 48px));
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgb(31 41 55 / 18%);
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  color: #ffffff;
+  background: #2563eb;
+}
+
+.cabecera h1,
+.cabecera p {
+  margin: 0;
+}
+
+.cabecera h1 {
+  font-size: 1.1rem;
+}
+
+.cabecera p {
+  margin-top: 3px;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.avatar {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  font-weight: 700;
+  background: #1d4ed8;
+  border: 2px solid #93c5fd;
+  border-radius: 50%;
+  place-items: center;
+}
+
+.mensajes {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.mensaje {
+  width: fit-content;
+  max-width: 82%;
+  padding: 11px 14px;
+  line-height: 1.4;
+  border-radius: 14px;
+}
+
+.mensaje p {
+  margin: 0;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #e2e8f0;
+  border-bottom-left-radius: 4px;
+}
+
+.usuario {
+  align-self: flex-end;
+  color: #ffffff;
+  background: #2563eb;
+  border-bottom-right-radius: 4px;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.formulario input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 12px;
+  font: inherit;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+}
+
+.formulario input:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.formulario button {
+  padding: 11px 16px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background: #2563eb;
+  border: 0;
+  border-radius: 9px;
+}
+
+.formulario button:hover {
+  background: #1d4ed8;
+}
+
+.oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .pagina {
+    padding: 0;
+  }
+
+  .chat {
+    height: 100vh;
+    border-radius: 0;
+  }
+}

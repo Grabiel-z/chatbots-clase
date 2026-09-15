@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Simple</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="pagina">
+      <section class="chat" aria-labelledby="titulo-chat">
+        <header class="cabecera">
+          <div class="avatar" aria-hidden="true">C</div>
+          <div>
+            <h1 id="titulo-chat">Chat Simple</h1>
+            <p>En linea</p>
+          </div>
+        </header>
+
+        <div id="mensajes" class="mensajes" aria-live="polite">
+          <article class="mensaje bot">
+            <p>Hola, soy Chat Simple. Preguntame por horario, precio o contacto.</p>
+          </article>
+        </div>
+
+        <form id="formulario-chat" class="formulario">
+          <label class="oculto" for="entrada">Escribe tu mensaje</label>
+          <input
+            id="entrada"
+            name="mensaje"
+            type="text"
+            placeholder="Escribe un mensaje"
+            autocomplete="off"
+            maxlength="200"
+            required
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
