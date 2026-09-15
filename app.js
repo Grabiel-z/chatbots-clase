@@ -3,9 +3,9 @@ const entrada = document.querySelector("#entrada");
 const mensajes = document.querySelector("#mensajes");
 
 const servicios = {
-  "servicio 1": "PONER COSTO",
-  "servicio 2": "PONER COSTO",
-  "servicio 3": "PONER COSTO",
+  "servicio 1": "S/ 100",
+  "servicio 2": "S/ 200",
+  "servicio 3": "S/ 300",
 };
 
 function obtenerRespuesta(texto) {

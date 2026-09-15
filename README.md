@@ -39,9 +39,9 @@ En `app.js` esta la lista `servicios`. Reemplaza los nombres y los valores de ej
 
 ```js
 const servicios = {
-  "servicio 1": "PONER COSTO",
-  "servicio 2": "PONER COSTO",
-  "servicio 3": "PONER COSTO",
+  "servicio 1": "S/ 100",
+  "servicio 2": "S/ 200",
+  "servicio 3": "S/ 300",
 };
 ```
 
