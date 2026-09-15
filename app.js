@@ -14,7 +14,7 @@ function obtenerRespuesta(texto) {
   }
 
   if (mensaje.includes("precio") || mensaje.includes("costo")) {
-    return "El precio depende del servicio. Escribe contacto para mas informacion.";
+    return "Este chatbot es una demostracion y no maneja precios.";
   }
 
   if (mensaje.includes("contacto") || mensaje.includes("telefono")) {
@@ -25,7 +25,7 @@ function obtenerRespuesta(texto) {
     return "De nada. Estoy aqui para ayudarte.";
   }
 
-  return "No entendi tu mensaje. Puedes preguntar por horario, precio o contacto.";
+  return "No entendi tu mensaje. Puedes preguntar por horario o contacto.";
 }
 
 function agregarMensaje(texto, tipo) {

@@ -18,7 +18,7 @@ El chatbot reconoce estas palabras:
 
 - hola o buenas: muestra un saludo.
 - horario: indica el horario de atencion de lunes a viernes, de 9 am a 6 pm.
-- precio o costo: indica que el precio depende del servicio.
+- precio o costo: indica que el chatbot es una demostracion y no maneja precios.
 - contacto o telefono: muestra un numero de contacto de ejemplo.
 - gracias: responde de forma cordial.
 
